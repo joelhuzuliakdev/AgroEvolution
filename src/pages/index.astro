@@ -54,519 +54,518 @@ import Layout from '../layouts/Layout.astro';
 	<!-- ─── HERO (video background) ─── -->
 	<section id="hero" class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#061a2e]">
 
-	<!-- VIDEO BG — reemplazá el src con tu video real -->
-	<video
-		id="heroVideo"
-		class="absolute inset-0 w-full h-full object-cover opacity-40"
-		autoplay muted loop playsinline
-		poster="/dronFumigando.webp"
-	>
-		<!-- Pone tu video acá: /videos/drone-campo.mp4 -->
-		<source src="/fumigando.mp4" type="video/mp4" />
-	</video>
+		<!-- VIDEO BG — reemplazá el src con tu video real -->
+		<video
+			id="heroVideo"
+			class="absolute inset-0 w-full h-full object-cover opacity-40"
+			autoplay muted loop playsinline
+			poster="/dronFumigando.webp"
+		>
+			<!-- Pone tu video acá: /videos/drone-campo.mp4 -->
+			<source src="/fumigando.mp4" type="video/mp4" />
+		</video>
 
-	<!-- Fallback image when video doesn't load -->
-	<img
-		id="heroFallback"
-		src="/dronFumigando.webp"
-		alt="Dron fumigando"
-		class="absolute inset-0 w-full h-full object-cover opacity-35 hidden"
-	/>
+		<!-- Fallback image when video doesn't load -->
+		<img
+			id="heroFallback"
+			src="/dronFumigando.webp"
+			alt="Dron fumigando"
+			class="absolute inset-0 w-full h-full object-cover opacity-35 hidden"
+		/>
 
-	<!-- Gradient overlays -->
-	<div class="absolute inset-0 bg-gradient-to-b from-[#061a2e]/60 via-transparent to-[#061a2e]/80 pointer-events-none"></div>
-	<div class="absolute inset-0 bg-gradient-to-r from-[#061a2e]/50 via-transparent to-transparent pointer-events-none"></div>
+		<!-- Gradient overlays -->
+		<div class="absolute inset-0 bg-gradient-to-b from-[#061a2e]/60 via-transparent to-[#061a2e]/80 pointer-events-none"></div>
+		<div class="absolute inset-0 bg-gradient-to-r from-[#061a2e]/50 via-transparent to-transparent pointer-events-none"></div>
 
-	<!-- Grid overlay -->
-	<div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(rgba(39,196,95,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(39,196,95,0.05) 1px, transparent 1px); background-size: 60px 60px; animation: gridFloat 20s linear infinite;"></div>
+		<!-- Grid overlay -->
+		<div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(rgba(39,196,95,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(39,196,95,0.05) 1px, transparent 1px); background-size: 60px 60px; animation: gridFloat 20s linear infinite;"></div>
 
-	<!-- Glow -->
-	<div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] pointer-events-none" style="background: radial-gradient(ellipse, rgba(29,154,78,0.3) 0%, transparent 70%);"></div>
+		<!-- Glow -->
+		<div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] pointer-events-none" style="background: radial-gradient(ellipse, rgba(29,154,78,0.3) 0%, transparent 70%);"></div>
 
-	<!-- Content -->
-	<div class="relative z-10 max-w-4xl w-full px-6 md:px-10 pt-28 pb-40 animate-heroFade">
-		<div class="inline-flex items-center gap-2 bg-[rgba(39,196,95,0.15)] border border-[rgba(39,196,95,0.4)] text-[#27c45f] text-xs font-bold tracking-[0.12em] uppercase px-4 py-1.5 rounded-full mb-6">
-		<span class="w-1.5 h-1.5 bg-[#27c45f] rounded-full animate-pulse"></span>
-		DJI Agras T100 · Río Segundo, Córdoba
+		<!-- Content -->
+		<div class="relative z-10 max-w-4xl w-full px-6 md:px-10 pt-28 pb-40 animate-heroFade">
+			<div class="inline-flex items-center gap-2 bg-[rgba(39,196,95,0.15)] border border-[rgba(39,196,95,0.4)] text-[#27c45f] text-xs font-bold tracking-[0.12em] uppercase px-4 py-1.5 rounded-full mb-6">
+				<span class="w-1.5 h-1.5 bg-[#27c45f] rounded-full animate-pulse"></span>
+				DJI Agras T100 · Río Segundo, Córdoba
+			</div>
+			<h1 class="font-['Bebas_Neue'] text-[clamp(3.2rem,10vw,7.5rem)] leading-[0.9] tracking-wide text-white mb-6">
+				AGRICULTURA<br>
+				DE <span class="text-[#27c45f]">PRECISIÓN</span><br>
+				<span class="text-[#41b3f5]">DESDE EL AIRE</span>
+			</h1>
+			<p class="text-white/70 text-[clamp(1rem,2.2vw,1.2rem)] leading-relaxed max-w-xl font-light mb-8">
+			Fumigación, fertilización y siembra con drones de última generación. Más eficiencia, menos químicos, mayor rendimiento para tu campo.
+			</p>
+			<div class="flex flex-wrap gap-4 items-center">
+				<a href="#contacto" class="inline-flex items-center gap-2 bg-[#1d9a4e] text-white font-bold text-base px-7 py-3.5 rounded-full no-underline hover:bg-[#27c45f] hover:-translate-y-0.5 transition-all duration-300 shadow-[0_4px_24px_rgba(29,154,78,0.4)]">
+					<svg viewBox="0 0 20 20" fill="none" class="w-4 h-4"><path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0L10 9.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" fill="white"/></svg>
+					Solicitar cotización
+				</a>
+				<a href="#como-funciona" class="inline-flex items-center gap-2 bg-transparent text-white/85 font-semibold text-sm px-6 py-3.5 rounded-full no-underline border border-white/30 hover:border-[#41b3f5] hover:text-[#41b3f5] hover:-translate-y-0.5 transition-all duration-300">
+					Ver tecnología →
+				</a>
+			</div>
 		</div>
-		<h1 class="font-['Bebas_Neue'] text-[clamp(3.2rem,10vw,7.5rem)] leading-[0.9] tracking-wide text-white mb-6">
-		AGRICULTURA<br>
-		DE <span class="text-[#27c45f]">PRECISIÓN</span><br>
-		<span class="text-[#41b3f5]">DESDE EL AIRE</span>
-		</h1>
-		<p class="text-white/70 text-[clamp(1rem,2.2vw,1.2rem)] leading-relaxed max-w-xl font-light mb-8">
-		Fumigación, fertilización y siembra con drones de última generación. Más eficiencia, menos químicos, mayor rendimiento para tu campo.
-		</p>
-		<div class="flex flex-wrap gap-4 items-center">
-		<a href="#contacto" class="inline-flex items-center gap-2 bg-[#1d9a4e] text-white font-bold text-base px-7 py-3.5 rounded-full no-underline hover:bg-[#27c45f] hover:-translate-y-0.5 transition-all duration-300 shadow-[0_4px_24px_rgba(29,154,78,0.4)]">
-			<svg viewBox="0 0 20 20" fill="none" class="w-4 h-4"><path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0L10 9.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" fill="white"/></svg>
-			Solicitar cotización
-		</a>
-		<a href="#como-funciona" class="inline-flex items-center gap-2 bg-transparent text-white/85 font-semibold text-sm px-6 py-3.5 rounded-full no-underline border border-white/30 hover:border-[#41b3f5] hover:text-[#41b3f5] hover:-translate-y-0.5 transition-all duration-300">
-			Ver tecnología →
-		</a>
-		</div>
-	</div>
 
-	<!-- Stats bar -->
-	<div class="absolute bottom-0 left-0 right-0 z-10">
-		<div class="flex justify-center gap-8 sm:gap-16 py-5 px-6 bg-gradient-to-t from-[#061a2e] to-transparent">
-		<div class="text-center">
-			<div class="font-['Bebas_Neue'] text-[clamp(1.8rem,4vw,2.8rem)] text-[#27c45f] leading-none tracking-wide">100HA</div>
-			<div class="text-[0.68rem] text-white/50 uppercase tracking-widest mt-0.5">por jornada</div>
+		<!-- Stats bar -->
+		<div class="absolute bottom-0 left-0 right-0 z-10">
+			<div class="flex justify-center gap-8 sm:gap-16 py-5 px-6 bg-gradient-to-t from-[#061a2e] to-transparent">
+				<div class="text-center">
+					<div class="font-['Bebas_Neue'] text-[clamp(1.8rem,4vw,2.8rem)] text-[#27c45f] leading-none tracking-wide">100HA</div>
+					<div class="text-[0.68rem] text-white/50 uppercase tracking-widest mt-0.5">por jornada</div>
+				</div>
+				<div class="text-center">
+					<div class="font-['Bebas_Neue'] text-[clamp(1.8rem,4vw,2.8rem)] text-[#27c45f] leading-none tracking-wide">40L</div>
+					<div class="text-[0.68rem] text-white/50 uppercase tracking-widest mt-0.5">capacidad</div>
+				</div>
+				<div class="text-center">
+					<div class="font-['Bebas_Neue'] text-[clamp(1.8rem,4vw,2.8rem)] text-[#27c45f] leading-none tracking-wide">3X</div>
+					<div class="text-[0.68rem] text-white/50 uppercase tracking-widest mt-0.5">más veloz</div>
+				</div>
+				<div class="text-center hidden sm:block">
+					<div class="font-['Bebas_Neue'] text-[clamp(1.8rem,4vw,2.8rem)] text-[#27c45f] leading-none tracking-wide">0</div>
+					<div class="text-[0.68rem] text-white/50 uppercase tracking-widest mt-0.5">pisoteo</div>
+				</div>
+			</div>
 		</div>
-		<div class="text-center">
-			<div class="font-['Bebas_Neue'] text-[clamp(1.8rem,4vw,2.8rem)] text-[#27c45f] leading-none tracking-wide">40L</div>
-			<div class="text-[0.68rem] text-white/50 uppercase tracking-widest mt-0.5">capacidad</div>
-		</div>
-		<div class="text-center">
-			<div class="font-['Bebas_Neue'] text-[clamp(1.8rem,4vw,2.8rem)] text-[#27c45f] leading-none tracking-wide">3X</div>
-			<div class="text-[0.68rem] text-white/50 uppercase tracking-widest mt-0.5">más veloz</div>
-		</div>
-		<div class="text-center hidden sm:block">
-			<div class="font-['Bebas_Neue'] text-[clamp(1.8rem,4vw,2.8rem)] text-[#27c45f] leading-none tracking-wide">0</div>
-			<div class="text-[0.68rem] text-white/50 uppercase tracking-widest mt-0.5">pisoteo</div>
-		</div>
-		</div>
-	</div>
 
-	<!-- Scroll indicator -->
-	<div class="absolute bottom-20 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-		<div class="w-5 h-5 border-r-2 border-b-2 border-white/35 rotate-45"></div>
-	</div>
+		<!-- Scroll indicator -->
+		<div class="absolute bottom-20 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+			<div class="w-5 h-5 border-r-2 border-b-2 border-white/35 rotate-45"></div>
+		</div>
 	</section>
 
 
 	<!-- ─── SERVICES ─── -->
 	<section id="servicios" class="py-24 px-6 md:px-10 bg-white">
-	<div class="max-w-6xl mx-auto">
-		<div class="reveal mb-14">
-		<span class="inline-block font-['Space_Mono'] text-[0.72rem] tracking-[0.2em] uppercase text-[#1d9a4e] mb-3">Nuestros servicios</span>
-		<h2 class="font-['Bebas_Neue'] text-[clamp(2.4rem,5vw,4rem)] leading-none tracking-wide text-[#0d1a10] mb-4">SOLUCIONES <span class="text-[#1d9a4e]">AÉREAS</span><br>PARA TU CAMPO</h2>
-		<p class="text-[#4a6358] text-base leading-relaxed max-w-lg">Servicios agrícolas completos con tecnología de drones DJI Agras T100, el estándar más avanzado del mercado.</p>
-		</div>
+		<div class="max-w-6xl mx-auto">
+			<div class="reveal mb-14">
+				<span class="inline-block font-['Space_Mono'] text-[0.72rem] tracking-[0.2em] uppercase text-[#1d9a4e] mb-3">Nuestros servicios</span>
+				<h2 class="font-['Bebas_Neue'] text-[clamp(2.4rem,5vw,4rem)] leading-none tracking-wide text-[#0d1a10] mb-4">SOLUCIONES <span class="text-[#1d9a4e]">AÉREAS</span><br>PARA TU CAMPO</h2>
+				<p class="text-[#4a6358] text-base leading-relaxed max-w-lg">Servicios agrícolas completos con tecnología de drones DJI Agras T100, el estándar más avanzado del mercado.</p>
+			</div>
 
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-		<!-- Fitosanitarios -->
-		<div class="reveal bg-[#f4f7f2] border border-[rgba(29,154,78,0.12)] rounded-xl p-7 relative overflow-hidden group hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(29,154,78,0.12)] hover:border-[#1d9a4e] transition-all duration-300">
-			<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0a3d1f] to-[#145a32] flex items-center justify-center mb-5 shadow-[0_6px_20px_rgba(10,61,31,0.25)]">
-			<svg viewBox="0 0 28 28" fill="none" class="w-7 h-7">
-				<path d="M14 3C8.477 3 4 7.477 4 13s4.477 10 10 10 10-4.477 10-10S19.523 3 14 3z" fill="rgba(39,196,95,0.2)" stroke="#27c45f" stroke-width="1.5"/>
-				<path d="M10 14l3 3 5-6" stroke="#27c45f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-			</svg>
-			</div>
-			<h3 class="font-['Bebas_Neue'] text-2xl tracking-wide text-[#0d1a10] mb-2">Fitosanitarios</h3>
-			<p class="text-[#4a6358] text-sm leading-relaxed mb-4">Aplicación precisa de agroquímicos para el control de plagas, enfermedades y malezas. Cobertura uniforme con mínima deriva.</p>
-			<span class="inline-block text-[0.7rem] font-bold uppercase tracking-wider text-[#1d9a4e] bg-[rgba(29,154,78,0.1)] px-3 py-1 rounded-full">Control de plagas</span>
-		</div>
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+			<!-- Fitosanitarios -->
+				<div class="reveal bg-[#f4f7f2] border border-[rgba(29,154,78,0.12)] rounded-xl p-7 relative overflow-hidden group hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(29,154,78,0.12)] hover:border-[#1d9a4e] transition-all duration-300">
+					<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0a3d1f] to-[#145a32] flex items-center justify-center mb-5 shadow-[0_6px_20px_rgba(10,61,31,0.25)]">
+						<svg viewBox="0 0 28 28" fill="none" class="w-7 h-7">
+							<path d="M14 3C8.477 3 4 7.477 4 13s4.477 10 10 10 10-4.477 10-10S19.523 3 14 3z" fill="rgba(39,196,95,0.2)" stroke="#27c45f" stroke-width="1.5"/>
+							<path d="M10 14l3 3 5-6" stroke="#27c45f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<h3 class="font-['Bebas_Neue'] text-2xl tracking-wide text-[#0d1a10] mb-2">Fitosanitarios</h3>
+					<p class="text-[#4a6358] text-sm leading-relaxed mb-4">Aplicación precisa de agroquímicos para el control de plagas, enfermedades y malezas. Cobertura uniforme con mínima deriva.</p>
+					<span class="inline-block text-[0.7rem] font-bold uppercase tracking-wider text-[#1d9a4e] bg-[rgba(29,154,78,0.1)] px-3 py-1 rounded-full">Control de plagas</span>
+				</div>
 
-		<!-- Fertilización -->
-		<div class="reveal bg-[#f4f7f2] border border-[rgba(29,154,78,0.12)] rounded-xl p-7 relative overflow-hidden group hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(29,154,78,0.12)] hover:border-[#1d9a4e] transition-all duration-300">
-			<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0a3d1f] to-[#145a32] flex items-center justify-center mb-5 shadow-[0_6px_20px_rgba(10,61,31,0.25)]">
-			<svg viewBox="0 0 28 28" fill="none" class="w-7 h-7">
-				<path d="M14 4L6 14h16L14 4z" fill="rgba(65,179,245,0.2)" stroke="#41b3f5" stroke-width="1.5" stroke-linejoin="round"/>
-				<rect x="9" y="14" width="10" height="9" rx="2" fill="rgba(65,179,245,0.1)" stroke="#41b3f5" stroke-width="1.5"/>
-				<path d="M11 18h6M14 16v4" stroke="#41b3f5" stroke-width="1.5" stroke-linecap="round"/>
-			</svg>
-			</div>
-			<h3 class="font-['Bebas_Neue'] text-2xl tracking-wide text-[#0d1a10] mb-2">Fertilización</h3>
-			<p class="text-[#4a6358] text-sm leading-relaxed mb-4">Distribución homogénea de fertilizantes líquidos o sólidos con dosificación variable según mapa de rendimiento.</p>
-			<span class="inline-block text-[0.7rem] font-bold uppercase tracking-wider text-[#1d9a4e] bg-[rgba(29,154,78,0.1)] px-3 py-1 rounded-full">Nutrición de cultivos</span>
-		</div>
+				<!-- Fertilización -->
+				<div class="reveal bg-[#f4f7f2] border border-[rgba(29,154,78,0.12)] rounded-xl p-7 relative overflow-hidden group hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(29,154,78,0.12)] hover:border-[#1d9a4e] transition-all duration-300">
+					<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0a3d1f] to-[#145a32] flex items-center justify-center mb-5 shadow-[0_6px_20px_rgba(10,61,31,0.25)]">
+						<svg viewBox="0 0 28 28" fill="none" class="w-7 h-7">
+							<path d="M14 4L6 14h16L14 4z" fill="rgba(65,179,245,0.2)" stroke="#41b3f5" stroke-width="1.5" stroke-linejoin="round"/>
+							<rect x="9" y="14" width="10" height="9" rx="2" fill="rgba(65,179,245,0.1)" stroke="#41b3f5" stroke-width="1.5"/>
+							<path d="M11 18h6M14 16v4" stroke="#41b3f5" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					</div>
+					<h3 class="font-['Bebas_Neue'] text-2xl tracking-wide text-[#0d1a10] mb-2">Fertilización</h3>
+					<p class="text-[#4a6358] text-sm leading-relaxed mb-4">Distribución homogénea de fertilizantes líquidos o sólidos con dosificación variable según mapa de rendimiento.</p>
+					<span class="inline-block text-[0.7rem] font-bold uppercase tracking-wider text-[#1d9a4e] bg-[rgba(29,154,78,0.1)] px-3 py-1 rounded-full">Nutrición de cultivos</span>
+				</div>
 
-		<!-- Siembra -->
-		<div class="reveal bg-[#f4f7f2] border border-[rgba(29,154,78,0.12)] rounded-xl p-7 relative overflow-hidden group hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(29,154,78,0.12)] hover:border-[#1d9a4e] transition-all duration-300">
-			<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0a3d1f] to-[#145a32] flex items-center justify-center mb-5 shadow-[0_6px_20px_rgba(10,61,31,0.25)]">
-			<svg viewBox="0 0 28 28" fill="none" class="w-7 h-7">
-				<path d="M8 22C8 17 14 10 20 6" stroke="#e8b84b" stroke-width="2" stroke-linecap="round"/>
-				<path d="M8 22c0-5 3-9 8-11" stroke="#e8b84b" stroke-width="1.5" stroke-linecap="round"/>
-				<circle cx="20" cy="6" r="3" fill="rgba(232,184,75,0.3)" stroke="#e8b84b" stroke-width="1.5"/>
-				<circle cx="8" cy="22" r="2" fill="#e8b84b"/>
-			</svg>
-			</div>
-			<h3 class="font-['Bebas_Neue'] text-2xl tracking-wide text-[#0d1a10] mb-2">Siembra</h3>
-			<p class="text-[#4a6358] text-sm leading-relaxed mb-4">Siembra aérea de semillas de pasturas, colza, arroz y otras especies en terrenos difíciles o inundables.</p>
-			<span class="inline-block text-[0.7rem] font-bold uppercase tracking-wider text-[#1d9a4e] bg-[rgba(29,154,78,0.1)] px-3 py-1 rounded-full">Zonas difíciles</span>
-		</div>
+				<!-- Siembra -->
+				<div class="reveal bg-[#f4f7f2] border border-[rgba(29,154,78,0.12)] rounded-xl p-7 relative overflow-hidden group hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(29,154,78,0.12)] hover:border-[#1d9a4e] transition-all duration-300">
+					<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0a3d1f] to-[#145a32] flex items-center justify-center mb-5 shadow-[0_6px_20px_rgba(10,61,31,0.25)]">
+						<svg viewBox="0 0 28 28" fill="none" class="w-7 h-7">
+							<path d="M8 22C8 17 14 10 20 6" stroke="#e8b84b" stroke-width="2" stroke-linecap="round"/>
+							<path d="M8 22c0-5 3-9 8-11" stroke="#e8b84b" stroke-width="1.5" stroke-linecap="round"/>
+							<circle cx="20" cy="6" r="3" fill="rgba(232,184,75,0.3)" stroke="#e8b84b" stroke-width="1.5"/>
+							<circle cx="8" cy="22" r="2" fill="#e8b84b"/>
+						</svg>
+					</div>
+					<h3 class="font-['Bebas_Neue'] text-2xl tracking-wide text-[#0d1a10] mb-2">Siembra</h3>
+					<p class="text-[#4a6358] text-sm leading-relaxed mb-4">Siembra aérea de semillas de pasturas, colza, arroz y otras especies en terrenos difíciles o inundables.</p>
+					<span class="inline-block text-[0.7rem] font-bold uppercase tracking-wider text-[#1d9a4e] bg-[rgba(29,154,78,0.1)] px-3 py-1 rounded-full">Zonas difíciles</span>
+				</div>
 
-		<!-- Monitoreo -->
-		<div class="reveal bg-[#f4f7f2] border border-[rgba(29,154,78,0.12)] rounded-xl p-7 relative overflow-hidden group hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(29,154,78,0.12)] hover:border-[#1d9a4e] transition-all duration-300">
-			<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0a3d1f] to-[#145a32] flex items-center justify-center mb-5 shadow-[0_6px_20px_rgba(10,61,31,0.25)]">
-			<svg viewBox="0 0 28 28" fill="none" class="w-7 h-7">
-				<rect x="4" y="6" width="20" height="14" rx="3" fill="rgba(29,154,78,0.15)" stroke="#1d9a4e" stroke-width="1.5"/>
-				<path d="M9 14l3-4 3 3 3-5" stroke="#1d9a4e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-			</svg>
+				<!-- Monitoreo -->
+				<div class="reveal bg-[#f4f7f2] border border-[rgba(29,154,78,0.12)] rounded-xl p-7 relative overflow-hidden group hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(29,154,78,0.12)] hover:border-[#1d9a4e] transition-all duration-300">
+					<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0a3d1f] to-[#145a32] flex items-center justify-center mb-5 shadow-[0_6px_20px_rgba(10,61,31,0.25)]">
+						<svg viewBox="0 0 28 28" fill="none" class="w-7 h-7">
+							<rect x="4" y="6" width="20" height="14" rx="3" fill="rgba(29,154,78,0.15)" stroke="#1d9a4e" stroke-width="1.5"/>
+							<path d="M9 14l3-4 3 3 3-5" stroke="#1d9a4e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<h3 class="font-['Bebas_Neue'] text-2xl tracking-wide text-[#0d1a10] mb-2">Monitoreo NDVI</h3>
+					<p class="text-[#4a6358] text-sm leading-relaxed mb-4">Relevamiento con análisis de índices de vegetación. Detección temprana de focos de plagas o estrés hídrico.</p>
+					<span class="inline-block text-[0.7rem] font-bold uppercase tracking-wider text-[#1d9a4e] bg-[rgba(29,154,78,0.1)] px-3 py-1 rounded-full">Tecnología NDVI</span>
+				</div>
 			</div>
-			<h3 class="font-['Bebas_Neue'] text-2xl tracking-wide text-[#0d1a10] mb-2">Monitoreo NDVI</h3>
-			<p class="text-[#4a6358] text-sm leading-relaxed mb-4">Relevamiento con análisis de índices de vegetación. Detección temprana de focos de plagas o estrés hídrico.</p>
-			<span class="inline-block text-[0.7rem] font-bold uppercase tracking-wider text-[#1d9a4e] bg-[rgba(29,154,78,0.1)] px-3 py-1 rounded-full">Tecnología NDVI</span>
-		</div>
-		</div>
 
-		<!-- Advantages strip -->
-		<div class="reveal grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mt-12">
-		{[
-			['Sin pisoteo', 'Zero daño mecánico al cultivo'],
-			['Menor insumo', 'Hasta 30% ahorro fitosanitarios'],
-			['Velocidad', '100 hectáreas por jornada'],
-			['Vuelo autónomo', 'GPS RTK precisión centimétrica'],
-			['Zonas difíciles', 'Opera en terrenos anegados'],
-		].map(([title, desc]) => (
-			<div class="flex flex-col gap-2 bg-gradient-to-br from-[#0a3d1f] to-[#0d3320] rounded-xl p-4">
-			<div class="w-6 h-6 bg-[rgba(39,196,95,0.2)] rounded-full flex items-center justify-center flex-shrink-0">
-				<svg viewBox="0 0 14 14" fill="none" class="w-3.5 h-3.5"><path d="M2.5 7l3.5 3.5 5.5-6" stroke="#27c45f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+			<!-- Advantages strip -->
+			<div class="reveal grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mt-12">
+				{[
+					['Sin pisoteo', 'Zero daño mecánico al cultivo'],
+					['Menor insumo', 'Hasta 30% ahorro fitosanitarios'],
+					['Velocidad', '100 hectáreas por jornada'],
+					['Vuelo autónomo', 'GPS RTK precisión centimétrica'],
+					['Zonas difíciles', 'Opera en terrenos anegados'],
+				].map(([title, desc]) => (
+					<div class="flex flex-col gap-2 bg-gradient-to-br from-[#0a3d1f] to-[#0d3320] rounded-xl p-4">
+						<div class="w-6 h-6 bg-[rgba(39,196,95,0.2)] rounded-full flex items-center justify-center flex-shrink-0">
+							<svg viewBox="0 0 14 14" fill="none" class="w-3.5 h-3.5"><path d="M2.5 7l3.5 3.5 5.5-6" stroke="#27c45f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						</div>
+						<h4 class="text-white text-sm font-bold">{title}</h4>
+						<p class="text-white/55 text-[0.75rem] leading-snug">{desc}</p>
+					</div>
+				))}
 			</div>
-			<h4 class="text-white text-sm font-bold">{title}</h4>
-			<p class="text-white/55 text-[0.75rem] leading-snug">{desc}</p>
-			</div>
-		))}
 		</div>
-	</div>
 	</section>
 
 
 	<!-- ─── HOW IT WORKS ─── -->
 	<section id="como-funciona" class="py-24 px-6 md:px-10 relative overflow-hidden" style="background: linear-gradient(160deg, #061a2e 0%, #0a3d1f 100%);">
-	<div class="max-w-6xl mx-auto">
-		<div class="reveal mb-14">
-		<span class="inline-block font-['Space_Mono'] text-[0.72rem] tracking-[0.2em] uppercase text-[#27c45f] mb-3">Cómo funciona</span>
-		<h2 class="font-['Bebas_Neue'] text-[clamp(2.4rem,5vw,4rem)] leading-none tracking-wide text-white mb-4">TECNOLOGÍA QUE<br><span class="text-[#27c45f]">TRANSFORMA</span> EL CAMPO</h2>
-		<p class="text-white/60 text-base leading-relaxed max-w-lg">Un proceso simple, rápido y altamente eficiente para proteger y potenciar tu producción.</p>
-		</div>
+		<div class="max-w-6xl mx-auto">
+			<div class="reveal mb-14">
+				<span class="inline-block font-['Space_Mono'] text-[0.72rem] tracking-[0.2em] uppercase text-[#27c45f] mb-3">Cómo funciona</span>
+				<h2 class="font-['Bebas_Neue'] text-[clamp(2.4rem,5vw,4rem)] leading-none tracking-wide text-white mb-4">TECNOLOGÍA QUE<br><span class="text-[#27c45f]">TRANSFORMA</span> EL CAMPO</h2>
+				<p class="text-white/60 text-base leading-relaxed max-w-lg">Un proceso simple, rápido y altamente eficiente para proteger y potenciar tu producción.</p>
+			</div>
 
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
-		{[
-			['01', 'Planificación', 'Cargamos el polígono del lote. El drone mapea y planifica la trayectoria óptima con GPS RTK centimétrico.'],
-			['02', 'Configuración', 'Cargamos el producto y calibramos dosis y caudal según la prescripción agronómica del lote.'],
-			['03', 'Vuelo autónomo', 'El DJI Agras T100 aplica el producto en forma uniforme, manteniendo altura constante sobre el canopeo.'],
-			['04', 'Reporte', 'Entregamos reporte con track GPS, producto aplicado, dosis y caudal. Total trazabilidad.'],
-		].map(([num, title, desc]) => (
-			<div class="reveal relative bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
-			<span class="font-['Bebas_Neue'] text-6xl leading-none text-white/5 absolute top-3 right-4">{num}</span>
-			<div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#1d9a4e] to-[#1565c0] flex items-center justify-center mb-4 shadow-[0_4px_20px_rgba(29,154,78,0.4)]">
-				<span class="font-['Bebas_Neue'] text-white text-lg">{num}</span>
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
+				{[
+					['01', 'Planificación', 'Cargamos el polígono del lote. El drone mapea y planifica la trayectoria óptima con GPS RTK centimétrico.'],
+					['02', 'Configuración', 'Cargamos el producto y calibramos dosis y caudal según la prescripción agronómica del lote.'],
+					['03', 'Vuelo autónomo', 'El DJI Agras T100 aplica el producto en forma uniforme, manteniendo altura constante sobre el canopeo.'],
+					['04', 'Reporte', 'Entregamos reporte con track GPS, producto aplicado, dosis y caudal. Total trazabilidad.'],
+				].map(([num, title, desc]) => (
+					<div class="reveal relative bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
+					<span class="font-['Bebas_Neue'] text-6xl leading-none text-white/5 absolute top-3 right-4">{num}</span>
+					<div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#1d9a4e] to-[#1565c0] flex items-center justify-center mb-4 shadow-[0_4px_20px_rgba(29,154,78,0.4)]">
+						<span class="font-['Bebas_Neue'] text-white text-lg">{num}</span>
+					</div>
+					<h3 class="text-white font-bold text-base mb-2">{title}</h3>
+					<p class="text-white/55 text-sm leading-relaxed">{desc}</p>
+					</div>
+				))}
 			</div>
-			<h3 class="text-white font-bold text-base mb-2">{title}</h3>
-			<p class="text-white/55 text-sm leading-relaxed">{desc}</p>
-			</div>
-		))}
-		</div>
 
-		<!-- Drone specs -->
-		<div class="reveal bg-white/4 border border-white/10 rounded-2xl p-6 md:p-10 flex flex-col md:flex-row gap-8 items-start md:items-center">
-		<div class="md:w-64">
-			<h3 class="font-['Bebas_Neue'] text-2xl tracking-wide text-[#27c45f] mb-2">DJI AGRAS T100</h3>
-			<p class="text-white/55 text-sm leading-relaxed">El drone agrícola más avanzado disponible. Diseñado para máxima eficiencia en grandes extensiones.</p>
-		</div>
-		<div class="flex-1 grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-			{[
-			['40L', 'Tanque'],
-			['100ha', 'Por jornada'],
-			['±10cm', 'GPS RTK'],
-			['8 mts', 'Ancho labor'],
-			['12L/min', 'Caudal máx'],
-			['Auto', 'Autónomo'],
-			].map(([val, label]) => (
-			<div class="text-center p-3 bg-white/4 border border-white/8 rounded-xl">
-				<span class="font-['Space_Mono'] text-[#41b3f5] font-bold text-base block mb-1">{val}</span>
-				<span class="text-white/40 text-[0.65rem] uppercase tracking-wider">{label}</span>
+			<!-- Drone specs -->
+			<div class="reveal bg-white/4 border border-white/10 rounded-2xl p-6 md:p-10 flex flex-col md:flex-row gap-8 items-start md:items-center">
+				<div class="md:w-64">
+					<h3 class="font-['Bebas_Neue'] text-2xl tracking-wide text-[#27c45f] mb-2">DJI AGRAS T100</h3>
+					<p class="text-white/55 text-sm leading-relaxed">El drone agrícola más avanzado disponible. Diseñado para máxima eficiencia en grandes extensiones.</p>
+				</div>
+				<div class="flex-1 grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+					{[
+					['40L', 'Tanque'],
+					['100ha', 'Por jornada'],
+					['±10cm', 'GPS RTK'],
+					['8 mts', 'Ancho labor'],
+					['12L/min', 'Caudal máx'],
+					['Auto', 'Autónomo'],
+					].map(([val, label]) => (
+					<div class="text-center p-3 bg-white/4 border border-white/8 rounded-xl">
+						<span class="font-['Space_Mono'] text-[#41b3f5] font-bold text-base block mb-1">{val}</span>
+						<span class="text-white/40 text-[0.65rem] uppercase tracking-wider">{label}</span>
+					</div>
+					))}
+				</div>
 			</div>
-			))}
 		</div>
-		</div>
-	</div>
 	</section>
 
 
 	<!-- ─── GALLERY ─── -->
 	<section id="galeria" class="py-24 px-6 md:px-10 bg-[#0d1a10]">
-	<div class="max-w-6xl mx-auto">
-		<div class="reveal text-center mb-14">
-		<span class="inline-block font-['Space_Mono'] text-[0.72rem] tracking-[0.2em] uppercase text-[#27c45f] mb-3">Galería</span>
-		<h2 class="font-['Bebas_Neue'] text-[clamp(2.4rem,5vw,4rem)] leading-none tracking-wide text-white mb-4">NUESTROS <span class="text-[#27c45f]">DRONES</span><br>EN ACCIÓN</h2>
-		<p class="text-white/55 text-base leading-relaxed max-w-lg mx-auto">Mirá cómo transformamos campos de toda la región de Córdoba con tecnología de precisión.</p>
-		</div>
+		<div class="max-w-6xl mx-auto">
+			<div class="reveal text-center mb-14">
+				<span class="inline-block font-['Space_Mono'] text-[0.72rem] tracking-[0.2em] uppercase text-[#27c45f] mb-3">Galería</span>
+				<h2 class="font-['Bebas_Neue'] text-[clamp(2.4rem,5vw,4rem)] leading-none tracking-wide text-white mb-4">NUESTROS <span class="text-[#27c45f]">DRONES</span><br>EN ACCIÓN</h2>
+				<p class="text-white/55 text-base leading-relaxed max-w-lg mx-auto">Mirá cómo transformamos campos de toda la región de Córdoba con tecnología de precisión.</p>
+			</div>
 
-		<!-- 
-		GALLERY GRID
-		Reemplazá los src con tus fotos reales.
-		Sugerencias de imágenes a conseguir:
-			- Drone volando sobre soja/maíz al atardecer
-			- Toma aérea del campo en tratamiento
-			- Operador con control en mano
-			- Closeup del tanque y boquillas
-			- Vista nocturna / amanecer
-			- Campo tratado vs sin tratar
-		-->
-		<div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+			<!-- 
+			GALLERY GRID
+			Reemplazá los src con tus fotos reales.
+			Sugerencias de imágenes a conseguir:
+				- Drone volando sobre soja/maíz al atardecer
+				- Toma aérea del campo en tratamiento
+				- Operador con control en mano
+				- Closeup del tanque y boquillas
+				- Vista nocturna / amanecer
+				- Campo tratado vs sin tratar
+			-->
+			<div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
 
-		<!-- Foto grande izquierda -->
-		<div class="reveal col-span-2 md:col-span-1 md:row-span-2 relative overflow-hidden rounded-2xl group cursor-pointer" style="min-height: 300px;">
-			<img
-			src="/gallery/drone-campo-1.webp"
-			alt="Dron DJI Agras T100 fumigando cultivo de soja"
-			class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-			loading="lazy"
-			onerror="this.src='/dronFumigando.webp'"
-			/>
-			<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-			<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-			<p class="text-white text-sm font-semibold">Fumigación sobre soja — Río Segundo</p>
+			<!-- Foto grande izquierda -->
+			<div class="reveal col-span-2 md:col-span-1 md:row-span-2 relative overflow-hidden rounded-2xl group cursor-pointer" style="min-height: 300px;">
+				<img
+				src="/gallery/drone-campo-1.webp"
+				alt="Dron DJI Agras T100 fumigando cultivo de soja"
+				class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+				loading="lazy"
+				onerror="this.src='/dronFumigando.webp'"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+				<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+					<p class="text-white text-sm font-semibold">Fumigación sobre soja — Río Segundo</p>
+				</div>
+			</div>
+
+			<!-- Foto top center -->
+			<div class="reveal relative overflow-hidden rounded-2xl group cursor-pointer" style="min-height: 200px;">
+				<img
+					src="/gallery/drone-campo-2.webp"
+					alt="Vista aérea de cultivo durante aplicación"
+					class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+					loading="lazy"
+					onerror="this.src='/dronFumigando.webp'"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+				<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+					<p class="text-white text-sm font-semibold">Vista aérea — aplicación NDVI</p>
+				</div>
+			</div>
+
+			<!-- Foto top right -->
+			<div class="reveal relative overflow-hidden rounded-2xl group cursor-pointer" style="min-height: 200px;">
+				<img
+					src="/gallery/drone-campo-3.webp"
+					alt="Operador controlando el dron desde tierra"
+					class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+					loading="lazy"
+					onerror="this.src='/dronFumigando.webp'"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+				<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+					<p class="text-white text-sm font-semibold">Operador certificado DJI</p>
+				</div>
+			</div>
+
+			<!-- Foto bottom center -->
+			<div class="reveal relative overflow-hidden rounded-2xl group cursor-pointer" style="min-height: 200px;">
+				<img
+					src="/gallery/drone-campo-4.webp"
+					alt="Drone sobre campo de maíz al atardecer"
+					class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+					loading="lazy"
+					onerror="this.src='/dronFumigando.webp'"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+				<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+					<p class="text-white text-sm font-semibold">Maíz — atardecer en Córdoba</p>
+				</div>
+			</div>
+
+			<!-- Foto bottom right -->
+			<div class="reveal relative overflow-hidden rounded-2xl group cursor-pointer" style="min-height: 200px;">
+				<img
+					src="/gallery/drone-campo-5.webp"
+					alt="Boquillas de aspersión del DJI Agras T100"
+					class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+					loading="lazy"
+					onerror="this.src='/dronFumigando.webp'"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+				<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+					<p class="text-white text-sm font-semibold">Boquillas de precisión T100</p>
+				</div>
+			</div>
+
+			</div>
+
+			<!-- Lightbox overlay -->
+			<div id="lightbox" class="hidden fixed inset-0 z-[200] bg-black/90 flex items-center justify-center p-4" onclick="closeLightbox()">
+				<button class="absolute top-5 right-5 text-white text-3xl font-light hover:text-[#27c45f] transition-colors" onclick="closeLightbox()">&times;</button>
+				<img id="lightboxImg" src="" alt="" class="max-w-full max-h-[90vh] object-contain rounded-xl" />
+			</div>
+
+			<!-- CTA below gallery -->
+			<div class="reveal text-center mt-12">
+				<p class="text-white/50 text-sm mb-4">¿Querés ver más trabajos? Seguinos en Instagram</p>
+				<a href="https://instagram.com/agroevolution" target="_blank" class="inline-flex items-center gap-2 border border-white/20 text-white/70 no-underline text-sm font-medium px-5 py-2.5 rounded-full hover:border-[#27c45f] hover:text-[#27c45f] transition-all duration-300">
+					<svg viewBox="0 0 24 24" fill="none" class="w-4 h-4"><rect x="2" y="2" width="20" height="20" rx="6" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+					@agroevolution
+				</a>
 			</div>
 		</div>
-
-		<!-- Foto top center -->
-		<div class="reveal relative overflow-hidden rounded-2xl group cursor-pointer" style="min-height: 200px;">
-			<img
-			src="/gallery/drone-campo-2.webp"
-			alt="Vista aérea de cultivo durante aplicación"
-			class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-			loading="lazy"
-			onerror="this.src='/dronFumigando.webp'"
-			/>
-			<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-			<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-			<p class="text-white text-sm font-semibold">Vista aérea — aplicación NDVI</p>
-			</div>
-		</div>
-
-		<!-- Foto top right -->
-		<div class="reveal relative overflow-hidden rounded-2xl group cursor-pointer" style="min-height: 200px;">
-			<img
-			src="/gallery/drone-campo-3.webp"
-			alt="Operador controlando el dron desde tierra"
-			class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-			loading="lazy"
-			onerror="this.src='/dronFumigando.webp'"
-			/>
-			<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-			<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-			<p class="text-white text-sm font-semibold">Operador certificado DJI</p>
-			</div>
-		</div>
-
-		<!-- Foto bottom center -->
-		<div class="reveal relative overflow-hidden rounded-2xl group cursor-pointer" style="min-height: 200px;">
-			<img
-			src="/gallery/drone-campo-4.webp"
-			alt="Drone sobre campo de maíz al atardecer"
-			class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-			loading="lazy"
-			onerror="this.src='/dronFumigando.webp'"
-			/>
-			<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-			<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-			<p class="text-white text-sm font-semibold">Maíz — atardecer en Córdoba</p>
-			</div>
-		</div>
-
-		<!-- Foto bottom right -->
-		<div class="reveal relative overflow-hidden rounded-2xl group cursor-pointer" style="min-height: 200px;">
-			<img
-			src="/gallery/drone-campo-5.webp"
-			alt="Boquillas de aspersión del DJI Agras T100"
-			class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-			loading="lazy"
-			onerror="this.src='/dronFumigando.webp'"
-			/>
-			<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-			<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-			<p class="text-white text-sm font-semibold">Boquillas de precisión T100</p>
-			</div>
-		</div>
-
-		</div>
-
-		<!-- Lightbox overlay -->
-		<div id="lightbox" class="hidden fixed inset-0 z-[200] bg-black/90 flex items-center justify-center p-4" onclick="closeLightbox()">
-		<button class="absolute top-5 right-5 text-white text-3xl font-light hover:text-[#27c45f] transition-colors" onclick="closeLightbox()">&times;</button>
-		<img id="lightboxImg" src="" alt="" class="max-w-full max-h-[90vh] object-contain rounded-xl" />
-		</div>
-
-		<!-- CTA below gallery -->
-		<div class="reveal text-center mt-12">
-		<p class="text-white/50 text-sm mb-4">¿Querés ver más trabajos? Seguinos en Instagram</p>
-		<a href="https://instagram.com/agroevolution" target="_blank" class="inline-flex items-center gap-2 border border-white/20 text-white/70 no-underline text-sm font-medium px-5 py-2.5 rounded-full hover:border-[#27c45f] hover:text-[#27c45f] transition-all duration-300">
-			<svg viewBox="0 0 24 24" fill="none" class="w-4 h-4"><rect x="2" y="2" width="20" height="20" rx="6" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-			@agroevolution
-		</a>
-		</div>
-	</div>
 	</section>
 
 
 	<!-- ─── FULLWIDTH DIVIDER IMAGE ─── -->
 	<div class="relative w-full h-[50vh] md:h-screen overflow-hidden">
-	<img src="/dronFumigando.webp" alt="Dron fumigando un campo al atardecer" class="absolute inset-0 w-full h-full object-cover" />
-	<div class="absolute inset-0 bg-black/45"></div>
-	<div class="absolute inset-0 flex items-center justify-center">
-		<div class="text-center px-6">
-		<p class="font-['Bebas_Neue'] text-[clamp(2rem,6vw,5rem)] text-white/90 leading-none tracking-wide">EL FUTURO DEL CAMPO<br><span class="text-[#27c45f]">VUELA ALTO</span></p>
+		<img src="/dronFumigando.webp" alt="Dron fumigando un campo al atardecer" class="absolute inset-0 w-full h-full object-cover" />
+		<div class="absolute inset-0 bg-black/45"></div>
+		<div class="absolute inset-0 flex items-center justify-center">
+			<div class="text-center px-6">
+				<p class="font-['Bebas_Neue'] text-[clamp(2rem,6vw,5rem)] text-white/90 leading-none tracking-wide">EL FUTURO DEL CAMPO<br><span class="text-[#27c45f]">VUELA ALTO</span></p>
+			</div>
 		</div>
-	</div>
 	</div>
 
 
 	<!-- ─── ABOUT ─── -->
 	<section id="nosotros" class="py-24 px-6 md:px-10 bg-[#f4f7f2]">
-	<div class="max-w-6xl mx-auto">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+		<div class="max-w-6xl mx-auto">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-		<!-- Visual card -->
-		<div class="reveal relative">
-			<div class="bg-gradient-to-br from-[#0a3d1f] to-[#061a2e] rounded-2xl p-8 md:p-12 text-white relative overflow-hidden">
-			<div class="absolute bottom-[-60px] right-[-60px] w-[200px] h-[200px] bg-[rgba(39,196,95,0.1)] rounded-full pointer-events-none"></div>
-			<h3 class="font-['Bebas_Neue'] text-[2.2rem] tracking-wide text-[#27c45f] mb-4">Río Segundo,<br>Córdoba</h3>
-			<p class="text-white/65 text-sm leading-relaxed mb-6">Somos un equipo apasionado por la agricultura de precisión, radicados en el corazón productivo de la Provincia de Córdoba. Combinamos conocimiento agronómico local con tecnología de punta.</p>
-			<div class="flex items-center gap-2 text-[#41b3f5] text-sm font-semibold">
-				<svg viewBox="0 0 16 16" fill="none" class="w-4 h-4"><path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 6.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" fill="#41b3f5"/></svg>
-				Río Segundo, Córdoba, Argentina
-			</div>
-			</div>
-			<div class="absolute -bottom-4 -right-4 bg-[#e8b84b] text-[#0d1a10] font-extrabold text-sm px-4 py-3 rounded-xl text-center shadow-[0_8px_30px_rgba(232,184,75,0.35)] leading-snug">
-			⭐ Operadores<br>certificados DJI
-			</div>
-		</div>
-
-		<!-- Text -->
-		<div class="reveal">
-			<span class="inline-block font-['Space_Mono'] text-[0.72rem] tracking-[0.2em] uppercase text-[#1d9a4e] mb-3">Quiénes somos</span>
-			<h2 class="font-['Bebas_Neue'] text-[clamp(2.4rem,5vw,3.8rem)] leading-none tracking-wide text-[#0d1a10] mb-5">EXPERIENCIA Y <span class="text-[#1d9a4e]">TECNOLOGÍA</span> AL SERVICIO DEL CAMPO</h2>
-			<p class="text-[#4a6358] leading-relaxed mb-4">En AgroEvolution creemos que el futuro de la agricultura argentina pasa por la tecnología. Por eso invertimos en los mejores equipos y en la capacitación continua de nuestros operadores.</p>
-			<p class="text-[#4a6358] leading-relaxed mb-6">Trabajamos con productores de toda la región central de Córdoba, ofreciendo un servicio personalizado, con asesoramiento agronómico previo a cada aplicación y seguimiento post-tratamiento.</p>
-			<div class="flex flex-col gap-3 mb-8">
-			{[
-				'Operadores certificados y capacitados',
-				'Equipos DJI de última generación',
-				'Asesoramiento agronómico incluido',
-				'Compromiso con el medioambiente',
-				'Cobertura en toda la región de Córdoba',
-			].map(item => (
-				<div class="flex items-center gap-3 text-[#0d1a10] font-semibold text-sm">
-				<span class="w-2 h-2 rounded-full bg-[#1d9a4e] flex-shrink-0"></span>
-				{item}
+				<!-- Visual card -->
+				<div class="reveal relative">
+					<div class="bg-gradient-to-br from-[#0a3d1f] to-[#061a2e] rounded-2xl p-8 md:p-12 text-white relative overflow-hidden">
+					<div class="absolute bottom-[-60px] right-[-60px] w-[200px] h-[200px] bg-[rgba(39,196,95,0.1)] rounded-full pointer-events-none"></div>
+					<h3 class="font-['Bebas_Neue'] text-[2.2rem] tracking-wide text-[#27c45f] mb-4">Río Segundo,<br>Córdoba</h3>
+					<p class="text-white/65 text-sm leading-relaxed mb-6">Somos un equipo apasionado por la agricultura de precisión, radicados en el corazón productivo de la Provincia de Córdoba. Combinamos conocimiento agronómico local con tecnología de punta.</p>
+					<div class="flex items-center gap-2 text-[#41b3f5] text-sm font-semibold">
+						<svg viewBox="0 0 16 16" fill="none" class="w-4 h-4"><path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 6.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" fill="#41b3f5"/></svg>
+						Río Segundo, Córdoba, Argentina
+					</div>
+					</div>
+					<div class="absolute -bottom-4 -right-4 bg-[#e8b84b] text-[#0d1a10] font-extrabold text-sm px-4 py-3 rounded-xl text-center shadow-[0_8px_30px_rgba(232,184,75,0.35)] leading-snug">
+					⭐ Operadores<br>certificados DJI
+					</div>
 				</div>
-			))}
-			</div>
-			<a href="#contacto" class="inline-flex items-center gap-2 bg-[#1d9a4e] text-white font-bold text-base px-7 py-3.5 rounded-full no-underline hover:bg-[#27c45f] hover:-translate-y-0.5 transition-all duration-300 shadow-[0_4px_24px_rgba(29,154,78,0.3)]">
-			Trabajar con nosotros →
-			</a>
-		</div>
 
+				<!-- Text -->
+				<div class="reveal">
+					<span class="inline-block font-['Space_Mono'] text-[0.72rem] tracking-[0.2em] uppercase text-[#1d9a4e] mb-3">Quiénes somos</span>
+					<h2 class="font-['Bebas_Neue'] text-[clamp(2.4rem,5vw,3.8rem)] leading-none tracking-wide text-[#0d1a10] mb-5">EXPERIENCIA Y <span class="text-[#1d9a4e]">TECNOLOGÍA</span> AL SERVICIO DEL CAMPO</h2>
+					<p class="text-[#4a6358] leading-relaxed mb-4">En AgroEvolution creemos que el futuro de la agricultura argentina pasa por la tecnología. Por eso invertimos en los mejores equipos y en la capacitación continua de nuestros operadores.</p>
+					<p class="text-[#4a6358] leading-relaxed mb-6">Trabajamos con productores de toda la región central de Córdoba, ofreciendo un servicio personalizado, con asesoramiento agronómico previo a cada aplicación y seguimiento post-tratamiento.</p>
+					<div class="flex flex-col gap-3 mb-8">
+						{[
+							'Operadores certificados y capacitados',
+							'Equipos DJI de última generación',
+							'Asesoramiento agronómico incluido',
+							'Compromiso con el medioambiente',
+							'Cobertura en toda la región de Córdoba',
+						].map(item => (
+							<div class="flex items-center gap-3 text-[#0d1a10] font-semibold text-sm">
+							<span class="w-2 h-2 rounded-full bg-[#1d9a4e] flex-shrink-0"></span>
+							{item}
+							</div>
+						))}
+					</div>
+					<a href="#contacto" class="inline-flex items-center gap-2 bg-[#1d9a4e] text-white font-bold text-base px-7 py-3.5 rounded-full no-underline hover:bg-[#27c45f] hover:-translate-y-0.5 transition-all duration-300 shadow-[0_4px_24px_rgba(29,154,78,0.3)]">
+					Trabajar con nosotros →
+					</a>
+				</div>
+			</div>
 		</div>
-	</div>
 	</section>
 
 
 	<!-- ─── CONTACT ─── -->
 	<section id="contacto" class="py-24 px-6 md:px-10" style="background: linear-gradient(135deg, #0a3d1f, #061a2e);">
-	<div class="max-w-6xl mx-auto">
-		<div class="reveal text-center mb-14">
-		<span class="inline-block font-['Space_Mono'] text-[0.72rem] tracking-[0.2em] uppercase text-[#27c45f] mb-3">Contacto</span>
-		<h2 class="font-['Bebas_Neue'] text-[clamp(2.4rem,5vw,4rem)] leading-none tracking-wide text-white mb-4">¿LISTO PARA <span class="text-[#27c45f]">VOLAR</span>?</h2>
-		<p class="text-white/55 text-base leading-relaxed max-w-lg mx-auto">Contanos sobre tu campo y te preparamos una cotización sin cargo. Respondemos en menos de 24 horas.</p>
-		</div>
+		<div class="max-w-6xl mx-auto">
+			<div class="reveal text-center mb-14">
+				<span class="inline-block font-['Space_Mono'] text-[0.72rem] tracking-[0.2em] uppercase text-[#27c45f] mb-3">Contacto</span>
+				<h2 class="font-['Bebas_Neue'] text-[clamp(2.4rem,5vw,4rem)] leading-none tracking-wide text-white mb-4">¿LISTO PARA <span class="text-[#27c45f]">VOLAR</span>?</h2>
+				<p class="text-white/55 text-base leading-relaxed max-w-lg mx-auto">Contanos sobre tu campo y te preparamos una cotización sin cargo. Respondemos en menos de 24 horas.</p>
+			</div>
 
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
 
-		<!-- Contact info -->
-		<div class="reveal">
-			<h3 class="font-['Bebas_Neue'] text-2xl tracking-wide text-[#27c45f] mb-3">Hablemos hoy</h3>
-			<p class="text-white/60 text-sm leading-relaxed mb-6">Atendemos consultas de lunes a sábado. Podés contactarnos por WhatsApp para una respuesta inmediata.</p>
-			<div class="flex flex-col gap-3">
-			<a href="https://wa.me/5493572000000?text=Hola%2C%20me%20interesa%20una%20cotización%20de%20fumigación%20con%20drones" target="_blank" class="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-4 no-underline text-white hover:bg-white/10 hover:border-[#1d9a4e] hover:translate-x-1 transition-all duration-300">
-				<div class="w-11 h-11 bg-[#25D366] rounded-xl flex items-center justify-center flex-shrink-0">
-				<svg viewBox="0 0 24 24" fill="white" class="w-5 h-5"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.555 4.11 1.525 5.835L.057 23.571a.5.5 0 00.607.625l5.9-1.547A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.893 0-3.668-.516-5.193-1.416l-.373-.222-3.863 1.013 1.032-3.76-.244-.387A9.959 9.959 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+				<!-- Contact info -->
+				<div class="reveal">
+					<h3 class="font-['Bebas_Neue'] text-2xl tracking-wide text-[#27c45f] mb-3">Hablemos hoy</h3>
+					<p class="text-white/60 text-sm leading-relaxed mb-6">Atendemos consultas de lunes a sábado. Podés contactarnos por WhatsApp para una respuesta inmediata.</p>
+					<div class="flex flex-col gap-3">
+						<a href="https://wa.me/5493572000000?text=Hola%2C%20me%20interesa%20una%20cotización%20de%20fumigación%20con%20drones" target="_blank" class="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-4 no-underline text-white hover:bg-white/10 hover:border-[#1d9a4e] hover:translate-x-1 transition-all duration-300">
+							<div class="w-11 h-11 bg-[#25D366] rounded-xl flex items-center justify-center flex-shrink-0">
+								<svg viewBox="0 0 24 24" fill="white" class="w-5 h-5"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.555 4.11 1.525 5.835L.057 23.571a.5.5 0 00.607.625l5.9-1.547A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.893 0-3.668-.516-5.193-1.416l-.373-.222-3.863 1.013 1.032-3.76-.244-.387A9.959 9.959 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+							</div>
+							<div>
+								<strong class="block text-sm font-bold mb-0.5">WhatsApp</strong>
+								<span class="text-white/50 text-xs">Respuesta inmediata · Río Segundo</span>
+							</div>
+						</a>
+						<a href="mailto:info@agroevolution.com.ar" class="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-4 no-underline text-white hover:bg-white/10 hover:border-[#1d9a4e] hover:translate-x-1 transition-all duration-300">
+							<div class="w-11 h-11 bg-[#1565c0] rounded-xl flex items-center justify-center flex-shrink-0">
+								<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" class="w-5 h-5"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 7l10 7 10-7" stroke-linecap="round"/></svg>
+							</div>
+							<div>
+								<strong class="block text-sm font-bold mb-0.5">Email</strong>
+								<span class="text-white/50 text-xs">info@agroevolution.com.ar</span>
+							</div>
+						</a>
+						<div class="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-4">
+							<div class="w-11 h-11 bg-[#145a32] rounded-xl flex items-center justify-center flex-shrink-0">
+								<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" class="w-5 h-5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke-linecap="round"/><circle cx="12" cy="9" r="2.5"/></svg>
+							</div>
+							<div>
+								<strong class="block text-sm font-bold mb-0.5 text-white">Ubicación</strong>
+								<span class="text-white/50 text-xs">Río Segundo, Córdoba, Argentina</span>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div>
-				<strong class="block text-sm font-bold mb-0.5">WhatsApp</strong>
-				<span class="text-white/50 text-xs">Respuesta inmediata · Río Segundo</span>
-				</div>
-			</a>
-			<a href="mailto:info@agroevolution.com.ar" class="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-4 no-underline text-white hover:bg-white/10 hover:border-[#1d9a4e] hover:translate-x-1 transition-all duration-300">
-				<div class="w-11 h-11 bg-[#1565c0] rounded-xl flex items-center justify-center flex-shrink-0">
-				<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" class="w-5 h-5"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 7l10 7 10-7" stroke-linecap="round"/></svg>
-				</div>
-				<div>
-				<strong class="block text-sm font-bold mb-0.5">Email</strong>
-				<span class="text-white/50 text-xs">info@agroevolution.com.ar</span>
-				</div>
-			</a>
-			<div class="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-4">
-				<div class="w-11 h-11 bg-[#145a32] rounded-xl flex items-center justify-center flex-shrink-0">
-				<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" class="w-5 h-5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke-linecap="round"/><circle cx="12" cy="9" r="2.5"/></svg>
-				</div>
-				<div>
-				<strong class="block text-sm font-bold mb-0.5">Ubicación</strong>
-				<span class="text-white/50 text-xs">Río Segundo, Córdoba, Argentina</span>
-				</div>
-			</div>
-			</div>
-		</div>
 
-		<!-- Form -->
-		<div class="reveal bg-white/5 border border-white/12 rounded-2xl p-6 md:p-8 backdrop-blur-md">
-			<h3 class="text-white font-bold text-lg mb-5">Solicitar cotización</h3>
-			<form onsubmit="handleForm(event)">
-			<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-				<div class="flex flex-col gap-1.5">
-				<label class="text-white/50 text-[0.75rem] font-semibold uppercase tracking-wider">Nombre *</label>
-				<input type="text" placeholder="Juan García" required class="bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-[#27c45f] focus:bg-white/12 transition-all placeholder-white/25 w-full" style="background: rgba(255,255,255,0.08); color: white;" />
-				</div>
-				<div class="flex flex-col gap-1.5">
-				<label class="text-white/50 text-[0.75rem] font-semibold uppercase tracking-wider">Teléfono *</label>
-				<input type="tel" placeholder="+54 9 3572..." required class="bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-[#27c45f] focus:bg-white/12 transition-all placeholder-white/25 w-full" style="background: rgba(255,255,255,0.08); color: white;" />
+				<!-- Form -->
+				<div class="reveal bg-white/5 border border-white/12 rounded-2xl p-6 md:p-8 backdrop-blur-md">
+					<h3 class="text-white font-bold text-lg mb-5">Solicitar cotización</h3>
+					<form onsubmit="handleForm(event)">
+						<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+							<div class="flex flex-col gap-1.5">
+								<label class="text-white/50 text-[0.75rem] font-semibold uppercase tracking-wider">Nombre *</label>
+								<input type="text" placeholder="Juan García" required class="bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-[#27c45f] focus:bg-white/12 transition-all placeholder-white/25 w-full" style="background: rgba(255,255,255,0.08); color: white;" />
+							</div>
+							<div class="flex flex-col gap-1.5">
+								<label class="text-white/50 text-[0.75rem] font-semibold uppercase tracking-wider">Teléfono *</label>
+								<input type="tel" placeholder="+54 9 3572..." required class="bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-[#27c45f] focus:bg-white/12 transition-all placeholder-white/25 w-full" style="background: rgba(255,255,255,0.08); color: white;" />
+							</div>
+						</div>
+						<div class="flex flex-col gap-1.5 mb-4">
+							<label class="text-white/50 text-[0.75rem] font-semibold uppercase tracking-wider">Servicio requerido</label>
+							<select class="bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-[#27c45f] transition-all w-full" style="background: rgba(13,26,46,0.9); color: white;">
+								<option value="">Seleccionar servicio...</option>
+								<option>Fitosanitarios (fumigación)</option>
+								<option>Fertilización líquida</option>
+								<option>Fertilización sólida</option>
+								<option>Siembra aérea</option>
+								<option>Monitoreo / mapeo NDVI</option>
+								<option>Consulta general</option>
+							</select>
+						</div>
+						<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+							<div class="flex flex-col gap-1.5">
+								<label class="text-white/50 text-[0.75rem] font-semibold uppercase tracking-wider">Hectáreas aprox.</label>
+								<input type="number" placeholder="Ej: 200" min="1" class="bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-[#27c45f] focus:bg-white/12 transition-all placeholder-white/25 w-full" style="background: rgba(255,255,255,0.08); color: white;" />
+							</div>
+							<div class="flex flex-col gap-1.5">
+							<label class="text-white/50 text-[0.75rem] font-semibold uppercase tracking-wider">Localidad</label>
+								<input type="text" placeholder="Río Segundo..." class="bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-[#27c45f] focus:bg-white/12 transition-all placeholder-white/25 w-full" style="background: rgba(255,255,255,0.08); color: white;" />
+							</div>
+						</div>
+						<div class="flex flex-col gap-1.5 mb-5">
+							<label class="text-white/50 text-[0.75rem] font-semibold uppercase tracking-wider">Mensaje adicional</label>
+							<textarea placeholder="Contanos más sobre tu lote, cultivo actual, urgencia..." class="bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-[#27c45f] focus:bg-white/12 transition-all placeholder-white/25 w-full resize-y min-h-[100px] font-['DM_Sans']" style="background: rgba(255,255,255,0.08); color: white;"></textarea>
+						</div>
+						<button type="submit" class="form-submit w-full py-3.5 border-0 cursor-pointer bg-[#1d9a4e] text-white font-bold text-base rounded-full flex items-center justify-center gap-2 hover:bg-[#27c45f] hover:-translate-y-0.5 transition-all duration-300 shadow-[0_4px_24px_rgba(29,154,78,0.35)]">
+							<svg viewBox="0 0 20 20" fill="none" class="w-4 h-4"><path d="M3 10l14-7-7 14-2-6-5-1z" fill="white"/></svg>
+							Enviar consulta
+						</button>
+					</form>
 				</div>
 			</div>
-			<div class="flex flex-col gap-1.5 mb-4">
-				<label class="text-white/50 text-[0.75rem] font-semibold uppercase tracking-wider">Servicio requerido</label>
-				<select class="bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-[#27c45f] transition-all w-full" style="background: rgba(13,26,46,0.9); color: white;">
-				<option value="">Seleccionar servicio...</option>
-				<option>Fitosanitarios (fumigación)</option>
-				<option>Fertilización líquida</option>
-				<option>Fertilización sólida</option>
-				<option>Siembra aérea</option>
-				<option>Monitoreo / mapeo NDVI</option>
-				<option>Consulta general</option>
-				</select>
-			</div>
-			<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-				<div class="flex flex-col gap-1.5">
-				<label class="text-white/50 text-[0.75rem] font-semibold uppercase tracking-wider">Hectáreas aprox.</label>
-				<input type="number" placeholder="Ej: 200" min="1" class="bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-[#27c45f] focus:bg-white/12 transition-all placeholder-white/25 w-full" style="background: rgba(255,255,255,0.08); color: white;" />
-				</div>
-				<div class="flex flex-col gap-1.5">
-				<label class="text-white/50 text-[0.75rem] font-semibold uppercase tracking-wider">Localidad</label>
-				<input type="text" placeholder="Río Segundo..." class="bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-[#27c45f] focus:bg-white/12 transition-all placeholder-white/25 w-full" style="background: rgba(255,255,255,0.08); color: white;" />
-				</div>
-			</div>
-			<div class="flex flex-col gap-1.5 mb-5">
-				<label class="text-white/50 text-[0.75rem] font-semibold uppercase tracking-wider">Mensaje adicional</label>
-				<textarea placeholder="Contanos más sobre tu lote, cultivo actual, urgencia..." class="bg-white/8 border border-white/15 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-[#27c45f] focus:bg-white/12 transition-all placeholder-white/25 w-full resize-y min-h-[100px] font-['DM_Sans']" style="background: rgba(255,255,255,0.08); color: white;"></textarea>
-			</div>
-			<button type="submit" class="form-submit w-full py-3.5 border-0 cursor-pointer bg-[#1d9a4e] text-white font-bold text-base rounded-full flex items-center justify-center gap-2 hover:bg-[#27c45f] hover:-translate-y-0.5 transition-all duration-300 shadow-[0_4px_24px_rgba(29,154,78,0.35)]">
-				<svg viewBox="0 0 20 20" fill="none" class="w-4 h-4"><path d="M3 10l14-7-7 14-2-6-5-1z" fill="white"/></svg>
-				Enviar consulta
-			</button>
-			</form>
 		</div>
-		</div>
-	</div>
 	</section>
 
 
 	<!-- ─── FOOTER ─── -->
 	<footer class="bg-[#061a2e] py-10 px-6 text-center text-white/45">
-	<div class="font-['Bebas_Neue'] text-3xl tracking-widest text-white mb-2">Agro<span class="text-[#27c45f]">Evolution</span></div>
-	<div class="flex flex-wrap justify-center gap-6 mb-4">
-		<a href="#servicios" class="text-white/45 no-underline text-xs hover:text-[#27c45f] transition-colors">Servicios</a>
-		<a href="#como-funciona" class="text-white/45 no-underline text-xs hover:text-[#27c45f] transition-colors">Tecnología</a>
-		<a href="#galeria" class="text-white/45 no-underline text-xs hover:text-[#27c45f] transition-colors">Galería</a>
-		<a href="#nosotros" class="text-white/45 no-underline text-xs hover:text-[#27c45f] transition-colors">Nosotros</a>
-		<a href="#contacto" class="text-white/45 no-underline text-xs hover:text-[#27c45f] transition-colors">Contacto</a>
-	</div>
-	<p class="text-xs leading-relaxed">© 2025 AgroEvolution · Servicios agrícolas con drones · Río Segundo, Córdoba, Argentina</p>
-	<p class="text-xs mt-1">DJI Agras T100 · Fitosanitarios · Fertilización · Siembra</p>
+		<div class="font-['Bebas_Neue'] text-3xl tracking-widest text-white mb-2">Agro<span class="text-[#27c45f]">Evolution</span></div>
+		<div class="flex flex-wrap justify-center gap-6 mb-4">
+			<a href="#servicios" class="text-white/45 no-underline text-xs hover:text-[#27c45f] transition-colors">Servicios</a>
+			<a href="#como-funciona" class="text-white/45 no-underline text-xs hover:text-[#27c45f] transition-colors">Tecnología</a>
+			<a href="#galeria" class="text-white/45 no-underline text-xs hover:text-[#27c45f] transition-colors">Galería</a>
+			<a href="#nosotros" class="text-white/45 no-underline text-xs hover:text-[#27c45f] transition-colors">Nosotros</a>
+			<a href="#contacto" class="text-white/45 no-underline text-xs hover:text-[#27c45f] transition-colors">Contacto</a>
+		</div>
+		<p class="text-xs leading-relaxed">© 2025 AgroEvolution · Servicios agrícolas con drones · Río Segundo, Córdoba, Argentina</p>
+		<p class="text-xs mt-1">DJI Agras T100 · Fitosanitarios · Fertilización · Siembra</p>
 	</footer>
 
 
