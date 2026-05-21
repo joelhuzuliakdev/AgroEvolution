@@ -291,10 +291,6 @@ import Layout from '../layouts/Layout.astro';
 			GALLERY GRID
 			Reemplazá los src con tus fotos reales.
 			Sugerencias de imágenes a conseguir:
-				- Drone volando sobre soja/maíz al atardecer
-				- Toma aérea del campo en tratamiento
-				- Operador con control en mano
-				- Closeup del tanque y boquillas
 				- Vista nocturna / amanecer
 				- Campo tratado vs sin tratar
 			-->
@@ -303,7 +299,7 @@ import Layout from '../layouts/Layout.astro';
 			<!-- Foto grande izquierda -->
 			<div class="reveal col-span-2 md:col-span-1 md:row-span-2 relative overflow-hidden rounded-2xl group cursor-pointer" style="min-height: 300px;">
 				<img
-				src="/gallery/drone-campo-1.webp"
+				src="/dronVistaAerea.webp"
 				alt="Dron DJI Agras T100 fumigando cultivo de soja"
 				class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
 				loading="lazy"
@@ -318,7 +314,7 @@ import Layout from '../layouts/Layout.astro';
 			<!-- Foto top center -->
 			<div class="reveal relative overflow-hidden rounded-2xl group cursor-pointer" style="min-height: 200px;">
 				<img
-					src="/gallery/drone-campo-2.webp"
+					src="/tomaAerea.webp"
 					alt="Vista aérea de cultivo durante aplicación"
 					class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
 					loading="lazy"
@@ -333,7 +329,7 @@ import Layout from '../layouts/Layout.astro';
 			<!-- Foto top right -->
 			<div class="reveal relative overflow-hidden rounded-2xl group cursor-pointer" style="min-height: 200px;">
 				<img
-					src="/gallery/drone-campo-3.webp"
+					src="/controlDron.webp"
 					alt="Operador controlando el dron desde tierra"
 					class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
 					loading="lazy"
@@ -348,7 +344,7 @@ import Layout from '../layouts/Layout.astro';
 			<!-- Foto bottom center -->
 			<div class="reveal relative overflow-hidden rounded-2xl group cursor-pointer" style="min-height: 200px;">
 				<img
-					src="/gallery/drone-campo-4.webp"
+					src="/droneEnCampoDeMaiz.webp"
 					alt="Drone sobre campo de maíz al atardecer"
 					class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
 					loading="lazy"
@@ -363,7 +359,7 @@ import Layout from '../layouts/Layout.astro';
 			<!-- Foto bottom right -->
 			<div class="reveal relative overflow-hidden rounded-2xl group cursor-pointer" style="min-height: 200px;">
 				<img
-					src="/gallery/drone-campo-5.webp"
+					src="/tanqueYBoquillaDrone.webp"
 					alt="Boquillas de aspersión del DJI Agras T100"
 					class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
 					loading="lazy"
@@ -380,13 +376,13 @@ import Layout from '../layouts/Layout.astro';
 			<!-- Lightbox overlay -->
 			<div id="lightbox" class="hidden fixed inset-0 z-[200] bg-black/90 flex items-center justify-center p-4" onclick="closeLightbox()">
 				<button class="absolute top-5 right-5 text-white text-3xl font-light hover:text-[#27c45f] transition-colors" onclick="closeLightbox()">&times;</button>
-				<img id="lightboxImg" src="" alt="" class="max-w-full max-h-[90vh] object-contain rounded-xl" />
+				<img id="lightboxImg" src="/droneEnCampoDeMaiz.webp" alt="" class="max-w-full max-h-[90vh] object-contain rounded-xl" />
 			</div>
 
 			<!-- CTA below gallery -->
 			<div class="reveal text-center mt-12">
 				<p class="text-white/50 text-sm mb-4">¿Querés ver más trabajos? Seguinos en Instagram</p>
-				<a href="https://instagram.com/agroevolution" target="_blank" class="inline-flex items-center gap-2 border border-white/20 text-white/70 no-underline text-sm font-medium px-5 py-2.5 rounded-full hover:border-[#27c45f] hover:text-[#27c45f] transition-all duration-300">
+				<a href="https://www.instagram.com/agroevolution2026/" target="_blank" class="inline-flex items-center gap-2 border border-white/20 text-white/70 no-underline text-sm font-medium px-5 py-2.5 rounded-full hover:border-[#27c45f] hover:text-[#27c45f] transition-all duration-300">
 					<svg viewBox="0 0 24 24" fill="none" class="w-4 h-4"><rect x="2" y="2" width="20" height="20" rx="6" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
 					@agroevolution
 				</a>
